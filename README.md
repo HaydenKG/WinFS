@@ -12,11 +12,8 @@ Results for 9.2 GB
 | Tool  | Time in seconds|
 | ------------- | ------------- |
 | node fs | 33 |
-| this single thread  | 33  |
-
-node fs: 33 seconds  
-this pck with robocopy single threaded: 33 seconds (but progress indication)  
-this pck with robocopy and multithread: 9 sec (though less accurat progress indication)  
+| this 1 thread  | 33  |
+| this 10 threads  | 9  | 
 
 #### Functionality 
 It uses windows robocopy tool that gets the original and destination path as well as further options like thread number to speed up the process ('robocopy "' + source + '" "' + destination + '" /MIR /NDL /NJH /NJS /nc /ns /MT:10'). It is executed with a child_process.exec to keep the load away from the main thread.
