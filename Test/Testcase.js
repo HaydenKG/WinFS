@@ -1,11 +1,11 @@
 const { exec, execSync } = require("child_process");
 const { EventEmitter } = require("stream");
-const {copyManager} = require("../copyManager.js");
+const { copymanager } = require("../index.js");
 
 var startTime = performance.now();
-var copymanager = new copyManager;
+
 //CHANGE THESE PATHS TO SOMETHING ON YOUR MACHINE
-copymanager.initiateCopy("C:\\Users\\Desktop\\WindowsNoEditor", "C:\\Users\\Desktop\\WinFS\\TestCopyFolder", 200, 2, true);
+copymanager.initiateCopy("C:\\Users\\Hayde\\Desktop\\AudacityPortable", "C:\\Users\\Hayde\\Desktop\\TestFolder", 200, 2, false);
 
 copymanager.on("progress", (percent) => {
     console.log("Progress: " + percent);

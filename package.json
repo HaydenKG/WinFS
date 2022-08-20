@@ -1,11 +1,11 @@
 {
   "name": "winfs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A package to copy large files / dirs on a windows machine (faster then node fs and with progress indication)",
-  "main": "copyManager.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\" && exit 1",
-    "start": "node copyManager.js"
+    "start": "node ./Test/Testcase.js"
   },
   "keywords": [
     "fs",
