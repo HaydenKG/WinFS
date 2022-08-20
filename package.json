@@ -1,5 +1,5 @@
 {
-  "name": "winfs",
+  "name": "@HaydenKG/winfs",
   "version": "0.0.1",
   "description": "A package to copy large files / dirs on a windows machine (faster then node fs and with progress indication)",
   "main": "index.js",
@@ -16,5 +16,12 @@
     "windows"
   ],
   "author": "HaydenKG",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HaydenKG/WinFS.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/HaydenKG"
+  }
 }

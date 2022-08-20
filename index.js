@@ -43,7 +43,6 @@ class copyManager extends EventEmitter{
                 console.debug("[WinFS] Done copying. Counted: " + copiedFileCount);
                 console.debug("[WinFS] Counted: " + this.totalFiles);
             }
-            this.emit("progress", 100);
             this.emit("finished");
         })
     }
