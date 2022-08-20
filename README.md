@@ -8,7 +8,7 @@ If your nodejs project is running on windows and you need to move large chunks o
 -	Up to 2.5 times faster if more threads are used compared to standart node fs module
 
 Comparison:  
-Results for 9.2 GB  
+Results for 9.2 GB on a local Samsung PM9A1 SSD
 | Tool  | Time in seconds|
 | ------------- | ------------- |
 | node fs | 33 |
@@ -23,6 +23,17 @@ The class inherits from EventEmitter to emit the progress. The progress is calcu
 #### Background
 For a development project with a nodejs express server running on windows I needed to move large directories to other PCs in the network and couldn't find an easy and reliable way to get a progress indication with the node FS or FS-extra modules. Therefore I experimented and created this package. 
 
-Improvements: 
--	Define how many threads should be used.
--	Define cases for older node versions or “export” only the initiate copy
+#### Example
+```
+let testCopyManager = new copyManager();
+testCopyManager.initiateCopy("C:\\Source\\Example", "C:\\Users\\Destination\\Example", 200, 2, true);
+
+testCopyManager.on("progress", (percent) => {
+    console.log("Progress: " + percent);
+})
+
+testCopyManager.on("finished", () => {
+    //do something here
+})
+```
+
